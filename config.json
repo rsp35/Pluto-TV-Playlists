@@ -21,5 +21,7 @@
   "xTvgUrl": false,
   "ondemand": false,
   "vlcopts": false,
-  "pipeopts": false
+  "pipeopts": false,
+  "client_id": "0fbe4459-d1fc-4e1a-80ab-a3840f082a27",
+  "_client_id_rotated_at": "2026-08-23T21:52:49.997Z"
 }
