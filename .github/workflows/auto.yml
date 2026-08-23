@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run uuid rotator
-        run: node rotate-uuid.js
-        
       - name: Checkout repo
         uses: actions/checkout@v4
 
@@ -24,8 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run uuid rotator
+        run: node rotate-uuid.js
+
       - name: Run scraper
         run: node index.js
+
+      - name: Run split channels
+        run: node split-channels.js
 
       - name: Commit files
         run: |
@@ -34,6 +37,3 @@ jobs:
           git add .
           git commit -m "Auto update playlist" || echo "No changes"
           git push --force
-
-      - name: Run split channels
-        run: node split-channels.js
