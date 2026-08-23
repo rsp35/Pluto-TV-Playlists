@@ -31,3 +31,6 @@ jobs:
           git add .
           git commit -m "Auto update playlist" || echo "No changes"
           git push --force
+
+      - name: Run split channels
+        run: node split-channels.js
